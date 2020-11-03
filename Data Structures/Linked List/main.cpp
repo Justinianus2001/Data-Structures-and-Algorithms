@@ -1,7 +1,7 @@
-#include "Single_Linked_List.hpp"
+#include "Singly_Linked_List.hpp"
 
 int main(){
-	Node *head;
+	SinglyNode *head;
 	Input(head);
 	Output(head);
 	cout << "TESTCASE 1: OK\n";

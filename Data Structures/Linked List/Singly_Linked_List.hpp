@@ -1,95 +1,95 @@
-#ifndef SINGLE_LINKED_LIST_H
-#define SINGLE_LINKED_LIST_H
+#ifndef SINGLY_LINKED_LIST_H
+#define SINGLY_LINKED_LIST_H
 
 #include <iostream>
 using namespace std;
 
-typedef struct SingleLinkedList{
+typedef struct SinglyLinkedList{
 	int data;
-	struct SingleLinkedList *next;
-}Node;
+	struct SinglyLinkedList *next;
+}SinglyNode;
 
-Node* InitHead(){
-	Node *head = NULL;
+SinglyNode* InitHead(){
+	SinglyNode *head = NULL;
 	return head;
 }
 
-Node* CreateNode(int val){
-	Node *q = new Node;
+SinglyNode* CreateNode(int val){
+	SinglyNode *q = new SinglyNode;
 	q->data = val, q->next = NULL;
 	return q;
 }
 
-void AddHead(Node *&head, int val){
-	Node *q = CreateNode(val);
+void AddHead(SinglyNode *&head, int val){
+	SinglyNode *q = CreateNode(val);
 	q->next = head, head = q;
 }
 
-void AddTail(Node *&head, int val){
-	Node *q = CreateNode(val);
+void AddTail(SinglyNode *&head, int val){
+	SinglyNode *q = CreateNode(val);
 	if(head == NULL)
 		head = q;
 	else{
-		Node *i = head;
+		SinglyNode *i = head;
 		while(i->next != NULL)
 			i = i->next;
 		i->next = q;
 	}
 }
 
-void AddAt(Node *&head, int ele, int pos){
-	Node *q = CreateNode(ele);
+void AddAt(SinglyNode *&head, int ele, int pos){
+	SinglyNode *q = CreateNode(ele);
 	if(pos == 1)
 		q->next = head, head = q;
 	else{
 		int cnt = 2;
-		Node *i = head;
+		SinglyNode *i = head;
 		while(i->next != NULL && cnt < pos)
 			i = i->next, cnt ++;
 		q->next = i->next, i->next = q;
 	}
 }
 
-void DeleteHead(Node *&head){
+void DeleteHead(SinglyNode *&head){
 	if(head != NULL){
-		Node *q = head;
+		SinglyNode *q = head;
 		head = head->next;
 		delete q;
 	}
 }
 
-void DeleteTail(Node *&head){
+void DeleteTail(SinglyNode *&head){
 	if(head != NULL){
 		if(head->next == NULL){
-			Node *q = head;
+			SinglyNode *q = head;
 			head = head->next;
 			delete(q);
 		}
 		else{
-			Node *i = head;
+			SinglyNode *i = head;
 			while(i->next->next != NULL)
 				i = i->next;
-			Node *j = i->next;
+			SinglyNode *j = i->next;
 			i->next = j->next;
 			delete j;
 		}
 	}
 }
 
-void DeleteAt(Node *&head, int pos){
+void DeleteAt(SinglyNode *&head, int pos){
 	if(pos == 1){
 		if(head != NULL){
-			Node *q = head;
+			SinglyNode *q = head;
 			head = head->next;
 			delete q;
 		}
 	}
 	else{
 		int cnt = 2;
-		Node *i = head;
+		SinglyNode *i = head;
 		while(i != NULL && i->next != NULL){
 			if(cnt == pos){
-				Node *j = i->next;
+				SinglyNode *j = i->next;
 				i->next = j->next;
 				delete j;
 			}
@@ -98,7 +98,7 @@ void DeleteAt(Node *&head, int pos){
 	}
 }
 
-int GetAt(Node *head, int idx){
+int GetAt(SinglyNode *head, int idx){
 	int cnt = 1;
 	while(head != NULL && head->next != NULL){
 		if(cnt == idx)
@@ -108,7 +108,7 @@ int GetAt(Node *head, int idx){
 	return -1;
 }
 
-int Search(Node *head, int val){
+int Search(SinglyNode *head, int val){
 	int pos = 1;
 	while(head != NULL){
 		if(head->data == val)
@@ -118,13 +118,13 @@ int Search(Node *head, int val){
 	return -1;
 }
 
-void DeleteByValue(Node *&head, int val){
+void DeleteByValue(SinglyNode *&head, int val){
 	int pos = Search(head, val);
 	while(pos != -1)
 		DeleteAt(head, pos), pos = Search(head, val);
 }
 
-void Input(Node *&head){
+void Input(SinglyNode *&head){
 	head = InitHead();
 	int n, val;
 	cin >> n;
@@ -134,7 +134,7 @@ void Input(Node *&head){
 	}
 }
 
-void Output(Node *head){
+void Output(SinglyNode *head){
 	while(head != NULL){
 		cout << head->data << ' ';
 		head = head->next;
@@ -142,7 +142,7 @@ void Output(Node *head){
 	cout << '\n';
 }
 
-int Length(Node *head){
+int Length(SinglyNode *head){
 	int len = 0;
 	while(head != NULL)
 		len ++, head = head->next;
