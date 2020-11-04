@@ -63,7 +63,7 @@ void DeleteTail(SinglyNode *&head){
 		if(head->next == NULL){
 			SinglyNode *q = head;
 			head = head->next;
-			delete(q);
+			delete q;
 		}
 		else{
 			SinglyNode *i = head;
