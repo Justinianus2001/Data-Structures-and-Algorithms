@@ -1,7 +1,4 @@
-//#include "LinkedList/Singly_Linked_List.hpp"
-//#include "LinkedList/Doubly_Linked_List.hpp"
-//#include "LinkedList/Circular_Singly_Linked_List.hpp"
-#include "Tree/Binary_Search_Tree.hpp"
+#include "Data_Structures.hpp"
 
 void judge(){
 	char ok;	cin.ignore();
@@ -20,94 +17,93 @@ void judge(){
 }
 
 void checkSinglyLinkedList(){
-//	SinglyNode *head;
-//	Input(head), Output(head);
-//	cout << "TESTCASE 1: OK\n";
-//	AddHead(head, 10), Output(head);
-//	cout << "TESTCASE 2: OK\n";
-//	AddAt(head, 50, 1), Output(head);
-//	cout << "TESTCASE 3: OK\n";
-//	AddTail(head, 30), Output(head);
-//	cout << "TESTCASE 4: OK\n";
-//	DeleteHead(head), Output(head);
-//	cout << "TESTCASE 5: OK\n";
-//	DeleteAt(head, 1), Output(head);
-//	cout << "TESTCASE 6: OK\n";
-//	DeleteTail(head), Output(head);
-//	cout << "TESTCASE 7: OK\n";
-//	cout << GetAt(head, 1) << '\n';
-//	cout << "TESTCASE 8: OK\n";
-//	DeleteByValue(head, 50), Output(head);
-//	cout << "TESTCASE 9: OK\n";
-//	cout << Length(head) << '\n';
-//	cout << "TESTCASE 10: OK\n";
-//	judge();
+	SinglyNode *head;
+	head->Input(head), head->Output(head);
+	cout << "TESTCASE 1: OK\n";
+	head->AddHead(head, 10), head->Output(head);
+	cout << "TESTCASE 2: OK\n";
+	head->AddAt(head, 50, 1), head->Output(head);
+	cout << "TESTCASE 3: OK\n";
+	head->AddTail(head, 30), head->Output(head);
+	cout << "TESTCASE 4: OK\n";
+	head->DeleteHead(head), head->Output(head);
+	cout << "TESTCASE 5: OK\n";
+	head->DeleteAt(head, 1), head->Output(head);
+	cout << "TESTCASE 6: OK\n";
+	head->DeleteTail(head), head->Output(head);
+	cout << "TESTCASE 7: OK\n";
+	cout << head->GetAt(head, 1) << '\n';
+	cout << "TESTCASE 8: OK\n";
+	head->DeleteByValue(head, 50), head->Output(head);
+	cout << "TESTCASE 9: OK\n";
+	cout << head->Length(head) << '\n';
+	cout << "TESTCASE 10: OK\n";
+	judge();
 }
 
 void checkDoublyLinkedList(){
-//	DoublyNode *head, *tail;
-//	Input(head, tail), Output(head, tail);
-//	cout << "TESTCASE 1: OK\n";
-//	AddHead(head, tail, 10), Output(head, tail);
-//	cout << "TESTCASE 2: OK\n";
-//	AddAt(head, tail, 50, 1), Output(head, tail);
-//	cout << "TESTCASE 3: OK\n";
-//	AddTail(head, tail, 30), Output(head, tail);
-//	cout << "TESTCASE 4: OK\n";
-//	DeleteHead(head, tail), Output(head, tail);
-//	cout << "TESTCASE 5: OK\n";
-//	DeleteAt(head, tail, 1), Output(head, tail);
-//	cout << "TESTCASE 6: OK\n";
-//	DeleteTail(head, tail), Output(head, tail);
-//	cout << "TESTCASE 7: OK\n";
-//	cout << GetAt(head, tail, 1) << '\n';
-//	cout << "TESTCASE 8: OK\n";
-//	DeleteByValue(head, tail, 50), Output(head, tail), OutputReverse(head, tail);
-//	cout << "TESTCASE 9: OK\n";
-//	cout << Length(head, tail) << '\n';
-//	cout << "TESTCASE 10: OK\n";
-//	judge();
+	DoublyNode *head, *tail;
+	head->Input(head, tail), head->Output(head, tail);
+	cout << "TESTCASE 1: OK\n";
+	head->AddHead(head, tail, 10), head->Output(head, tail);
+	cout << "TESTCASE 2: OK\n";
+	head->AddAt(head, tail, 50, 1), head->Output(head, tail);
+	cout << "TESTCASE 3: OK\n";
+	head->AddTail(head, tail, 30), head->Output(head, tail);
+	cout << "TESTCASE 4: OK\n";
+	head->DeleteHead(head, tail), head->Output(head, tail);
+	cout << "TESTCASE 5: OK\n";
+	head->DeleteAt(head, tail, 1), head->Output(head, tail);
+	cout << "TESTCASE 6: OK\n";
+	head->DeleteTail(head, tail), head->Output(head, tail);
+	cout << "TESTCASE 7: OK\n";
+	cout << head->GetAt(head, tail, 1) << '\n';
+	cout << "TESTCASE 8: OK\n";
+	head->DeleteByValue(head, tail, 50), head->Output(head, tail), head->OutputReverse(head, tail);
+	cout << "TESTCASE 9: OK\n";
+	cout << head->Length(head, tail) << '\n';
+	cout << "TESTCASE 10: OK\n";
+	judge();
 }
 
 void checkCircularSinglyLinkedList(){
-//	CircularSinglyNode *tail;
-//	Input(tail), Output(tail);
-//	cout << "TESTCASE 1: OK\n";
-//	AddHead(tail, 10), Output(tail);
-//	cout << "TESTCASE 2: OK\n";
-//	AddAt(tail, 50, 1), Output(tail);
-//	cout << "TESTCASE 3: OK\n";
-//	AddTail(tail, 30), Output(tail);
-//	cout << "TESTCASE 4: OK\n";
-//	DeleteHead(tail), Output(tail);
-//	cout << "TESTCASE 5: OK\n";
-//	DeleteAt(tail, 1), Output(tail);
-//	cout << "TESTCASE 6: OK\n";
-//	DeleteTail(tail), Output(tail);
-//	cout << "TESTCASE 7: OK\n";
-//	cout << GetAt(tail, 1) << '\n';
-//	cout << "TESTCASE 8: OK\n";
-//	DeleteByValue(tail, 50), Output(tail);
-//	cout << "TESTCASE 9: OK\n";
-//	cout << Length(tail) << '\n';
-//	cout << "TESTCASE 10: OK\n";
-//	judge();
+	CircularSinglyNode *tail;
+	tail->Input(tail), tail->Output(tail);
+	cout << "TESTCASE 1: OK\n";
+	tail->AddHead(tail, 10), tail->Output(tail);
+	cout << "TESTCASE 2: OK\n";
+	tail->AddAt(tail, 50, 1), tail->Output(tail);
+	cout << "TESTCASE 3: OK\n";
+	tail->AddTail(tail, 30), tail->Output(tail);
+	cout << "TESTCASE 4: OK\n";
+	tail->DeleteHead(tail), tail->Output(tail);
+	cout << "TESTCASE 5: OK\n";
+	tail->DeleteAt(tail, 1), tail->Output(tail);
+	cout << "TESTCASE 6: OK\n";
+	tail->DeleteTail(tail), tail->Output(tail);
+	cout << "TESTCASE 7: OK\n";
+	cout << tail->GetAt(tail, 1) << '\n';
+	cout << "TESTCASE 8: OK\n";
+	tail->DeleteByValue(tail, 50), tail->Output(tail);
+	cout << "TESTCASE 9: OK\n";
+	cout << tail->Length(tail) << '\n';
+	cout << "TESTCASE 10: OK\n";
+	judge();
 }
 
 void checkBinarySearchTree(){
 	TreeNode *root = NULL;
-	Input(root);
-	PreOrder(root);
+	root->Input(root), root->PreOrder(root);
 	cout << "\nTESTCASE 1: OK\n";
-	InOrder(root);
+	root->InOrder(root);
 	cout << "\nTESTCASE 2: OK\n";
-	PostOrder(root);
+	root->PostOrder(root);
 	cout << "\nTESTCASE 3: OK\n";
-	cout << Search(root, 30);
+	cout << root->Search(root, 30);
 	cout << "\nTESTCASE 4: OK\n";
-	DeleteByValue(root, 50), PreOrder(root);
+	root->DeleteByValue(root, 50), root->PreOrder(root);
 	cout << "\nTESTCASE 5: OK\n";
-	cout << Depth(root);
+	cout << root->Depth(root);
 	cout << "\nTESTCASE 6: OK\n";
 	judge();
 }
