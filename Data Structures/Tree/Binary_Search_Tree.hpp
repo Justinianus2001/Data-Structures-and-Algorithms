@@ -132,6 +132,6 @@ typedef struct BinarySearchTree{
 			AddNode(root, val);
 		}
 	}
-}TreeNode;
+}BSNode;
 
 #endif

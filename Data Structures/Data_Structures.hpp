@@ -5,5 +5,6 @@
 #include "LinkedList/Doubly_Linked_List.hpp"
 #include "LinkedList/Circular_Singly_Linked_List.hpp"
 #include "Tree/Binary_Search_Tree.hpp"
+#include "Tree/AVL_Tree.hpp"
 
 #endif

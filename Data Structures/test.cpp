@@ -4,7 +4,7 @@ void judge(){
 	char ok;	cin.ignore();
 	do{
 		cout << "PENDING... (Y/N): ";
-		ok = getchar();
+		ok = getchar(), fflush(stdin);
 		if(ok == 'Y'){
 			cout << "PRETEST PASSED !!!";
 			break;
@@ -92,7 +92,7 @@ void checkCircularSinglyLinkedList(){
 }
 
 void checkBinarySearchTree(){
-	TreeNode *root = NULL;
+	BSNode *root = NULL;
 	root->Input(root), root->PreOrder(root);
 	cout << "\nTESTCASE 1: OK\n";
 	root->InOrder(root);
@@ -108,18 +108,35 @@ void checkBinarySearchTree(){
 	judge();
 }
 
+void checkAVLTree(){
+	AVLNode *root = NULL;
+	root->Input(root), root->PreOrder(root);
+	cout << "\nTESTCASE 1: OK\n";
+	root->InOrder(root);
+	cout << "\nTESTCASE 2: OK\n";
+	root->PostOrder(root);
+	cout << "\nTESTCASE 3: OK\n";
+	cout << root->Search(root, 30);
+	cout << "\nTESTCASE 4: OK\n";
+	root->DeleteByValue(root, 10), root->PreOrder(root);
+	cout << "\nTESTCASE 5: OK\n";
+	cout << root->GetBalanceFactor(root);
+	cout << "\nTESTCASE 6: OK\n";
+	judge();
+}
+
 int main(){
 	char ch;
 	cout << "----- MENU TEST -----\n";
 	cout << "1. Linked List\n";
 	cout << "2. Tree\n";
-	cout << "Enter your choice: ";		ch = getchar(), cin.ignore();
+	cout << "Enter your choice: ";		ch = getchar(), fflush(stdin);
 	switch(ch){
 		case '1':
 			cout << "  1.1 Singly Linked List\n";
 			cout << "  1.2 Doubly Linked List\n";
 			cout << "  1.3 Circular Singly Linked List\n";
-			cout << "Enter your choice: ";		ch = getchar(), cin.ignore();
+			cout << "Enter your choice: ";		ch = getchar(), fflush(stdin);
 			switch(ch){
 				case '1':
 					checkSinglyLinkedList();
@@ -136,10 +153,14 @@ int main(){
 			break;
 		case '2':
 			cout << "  2.1 Binary Search Tree\n";
-			cout << "Enter your choice: ";		ch = getchar(), cin.ignore();
+			cout << "  2.2 AVL Tree\n";
+			cout << "Enter your choice: ";		ch = getchar(), fflush(stdin);
 			switch(ch){
 				case '1':
 					checkBinarySearchTree();
+					break;
+				case '2':
+					checkAVLTree();
 					break;
 				default:
 					cout << "Choice Invalid !!!";
