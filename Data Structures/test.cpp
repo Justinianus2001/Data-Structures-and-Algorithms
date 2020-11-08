@@ -125,6 +125,21 @@ void checkAVLTree(){
 	judge();
 }
 
+void checkSplayTree(){
+	SplayNode *root = NULL;
+	root->Input(root), root->PreOrder(root);
+	cout << "\nTESTCASE 1: OK\n";
+	root->InOrder(root);
+	cout << "\nTESTCASE 2: OK\n";
+	root->PostOrder(root);
+	cout << "\nTESTCASE 3: OK\n";
+	cout << root->Search(root, 30);
+	cout << "\nTESTCASE 4: OK\n";
+	root->DeleteByValue(root, 20), root->PreOrder(root);
+	cout << "\nTESTCASE 5: OK\n";
+	judge();
+}
+
 int main(){
 	char ch;
 	cout << "----- MENU TEST -----\n";
@@ -154,6 +169,7 @@ int main(){
 		case '2':
 			cout << "  2.1 Binary Search Tree\n";
 			cout << "  2.2 AVL Tree\n";
+			cout << "  2.3 Splay Tree\n";
 			cout << "Enter your choice: ";		ch = getchar(), fflush(stdin);
 			switch(ch){
 				case '1':
@@ -161,6 +177,9 @@ int main(){
 					break;
 				case '2':
 					checkAVLTree();
+					break;
+				case '3':
+					checkSplayTree();
 					break;
 				default:
 					cout << "Choice Invalid !!!";
