@@ -140,6 +140,11 @@ void checkSplayTree(){
 	judge();
 }
 
+void checkSegmentTree(){
+	Manage();
+	judge();
+}
+
 int main(){
 	char ch;
 	cout << "----- MENU TEST -----\n";
@@ -170,6 +175,7 @@ int main(){
 			cout << "  2.1 Binary Search Tree\n";
 			cout << "  2.2 AVL Tree\n";
 			cout << "  2.3 Splay Tree\n";
+			cout << "  2.4 Segment Tree\n";
 			cout << "Enter your choice: ";		ch = getchar(), fflush(stdin);
 			switch(ch){
 				case '1':
@@ -180,6 +186,9 @@ int main(){
 					break;
 				case '3':
 					checkSplayTree();
+					break;
+				case '4':
+					checkSegmentTree();
 					break;
 				default:
 					cout << "Choice Invalid !!!";

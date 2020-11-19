@@ -7,5 +7,6 @@
 #include "Tree/Binary_Search_Tree.hpp"
 #include "Tree/AVL_Tree.hpp"
 #include "Tree/Splay_Tree.hpp"
+#include "Tree/Segment_Tree.hpp"
 
 #endif
